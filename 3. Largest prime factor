@@ -1,0 +1,19 @@
+# The prime factors of 13195 are 5, 7, 13 and 29.
+# 13195의 주요 요인은 5, 7, 13, 29이다.
+# What is the largest prime factor of the number 600851475143 ?
+# 600851475143이라는 숫자의 가장 큰 소인수는 무엇인가?
+
+ℹ)
+def Largest_prime_factor(num, div=2):
+    while div < num:
+        if num % div == 0 and num / div > 1:
+            num = num / div
+        else:
+            div += 1
+    return num
+
+print(Largest_prime_factor(600851475143))
+
+# Answer : 6857
+
+### At first, it took me a long time to think about the problem, but it was easier than I thought when I was coding with my hands.

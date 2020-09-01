@@ -1,0 +1,38 @@
+# A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+# 팔린드롬 숫자는 양방향으로 읽힌다. 두 자리 숫자의 곱으로 만든 가장 큰 팔자국은 9009 = 91 × 99이다.
+# Find the largest palindrome made from the product of two 3-digit numbers.
+# 두 개의 3자리 숫자로 만들어진 가장 팔린드롬 숫자를 찾아라.
+
+ℹ)
+num = 0
+for x in range(100, 1000):
+    for y in range(100, 1000):
+        a = x * y
+        if num < a:
+            if str(a)==str(a)[::-1]:
+                num = a
+print(num)
+
+ℹℹ)
+Set = []
+for x in range(100, 1000):
+    for y in range(100, 1000):
+        a = x * y
+        if str(a) == str(a)[::-1]:
+            Set.append(a)
+print(max(Set))
+
+ℹℹℹ)
+num = 0
+for a in range(1000,100,-1):
+    for b in range(1000,100,-1):
+        c = a * b
+        if num < c:
+            if str(c) == str(c)[::-1]:
+                num = c
+
+print(num)
+
+# Answer : 906609
+
+### As I solved this problem, I kept thinking about various ideas and tried and uploaded three ways to succeed. 

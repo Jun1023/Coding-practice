@@ -1,0 +1,29 @@
+# The sum of the squares of the first ten natural numbers is,
+# 첫 10개의 자연수의 제곱합은,
+# 1**2 + 2**2 + ... + 10**2 = 385
+# The square of the sum of the first ten natural numbers is,
+# 첫 10개의 자연수 합계의 제곱은,
+# (1 + 2 + 3 + ... + 10)**2 = 55**2 = 3025
+# Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is .
+# 따라서 처음 10개의 자연수의 제곱합과 제곱합 사이의 차이는 입니다.
+# 3025 - 385 = 2640
+# Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+# 처음 100개의 자연수의 제곱의 합과 그 합의 제곱의 차이를 구하라.
+
+ℹ)
+def Sum_square_difference(a, b):
+    num = 0
+    sum1 = 0
+    sum2 = 0
+    for i in range(a, b+1):
+        sum1 += i ** 2
+    for i in range(a, b+1):
+        num += i
+    sum2 += num ** 2
+    return sum2 - sum1
+
+print(Sum_square_difference(1, 100))
+
+# Answer : 25164150
+
+### There were many failures, but I was happy to succeed. ^-^  Let me know if there is any other way!

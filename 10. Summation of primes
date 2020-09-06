@@ -1,0 +1,23 @@
+# The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+# # 10 이하 소수의 합은 2 + 3 + 5 + 7 = 17이다.
+# Find the sum of all the primes below two million.
+# 2,000,000,만 이하의 모든 소수들의 합을 찾아라.
+
+ℹ)
+def prime_sum(num):
+    sum = 0
+    for a in range(2, num+1):
+        prime_yes = True
+        for i in range(2, a):
+            if a % i == 0:
+                prime_yes = False
+                break
+        if prime_yes:
+            sum += a
+    return sum
+
+print(prime_sum(2000000)) 
+
+# Answer : 142913828922
+
+### It's hard to code for prime, and I couldn't solve the problem before, but as I solved this problem, I was able to solve the problem of prime, and I think I can solve many problems. ^-^

@@ -1,0 +1,32 @@
+# By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+# 처음 6개의 소수를 2,3,5,7,11,13개로 나열하면 6번째 소수가 13임을 알 수 있다.
+# What is the 10 001st prime number?
+# 10001번째 소수는 몇번인가요?
+
+def gather_primes(n):
+    primes = list()
+    primes.append(2)
+    primes.append(3)
+    primes.append(5)
+    i = 7
+    while (len(primes) < n):
+        is_prime = True
+        for p in primes:
+            if 0 == (i % p):
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(i)
+        i += 2
+        if 0 == (i % 5):
+            i += 2
+    return primes
+
+
+order = 10001
+primes = gather_primes(order)
+print(primes[order - 1])
+
+# result = 104743
+### The problem was that he tried to solve the formula "Eratosthenes sieve" without knowing it, but he couldn't solve it and copied it through the Internet.
+    When I have time, I will fully understand and post it again in my own way.

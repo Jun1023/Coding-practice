@@ -24,3 +24,5 @@ print(find_pythagorean_product(1000))
 # Answer : a = 200, b = 375, c = 425, Multiplication = 31875000
 
 ### I thought a lot about the method, but there were many errors and failures in moving to coding, so I looked at the examples on the Internet, found the direction of what to do, and then coded it myself.
+
+I got help : https://lifeisforu.tistory.com/430
